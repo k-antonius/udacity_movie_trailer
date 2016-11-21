@@ -1,6 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
+*.pycod]
 *$py.class
 
 # C extensions
@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# IDE and file system
+.DS_Store
+.project
+.pydevproject
+src/.DS_Store
