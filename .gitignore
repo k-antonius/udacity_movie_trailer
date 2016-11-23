@@ -2,6 +2,7 @@
 __pycache__/
 *.pycod]
 *$py.class
+*/*/*.pyc
 
 # C extensions
 *.so
@@ -93,3 +94,4 @@ ENV/
 .project
 .pydevproject
 src/.DS_Store
+
