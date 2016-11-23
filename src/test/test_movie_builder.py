@@ -1,11 +1,15 @@
 '''
-Created on Nov 22, 2016
+Test Suite for the movie data site.
 
+Created on Nov 22, 2016
 @author: kennethalamantias
 '''
+
+
+import os
 import unittest
 from movie_trailer_site import movie_builder
-import os
+
 
 # The contents of the test csv file.
 # title,description,trailer_url,poster_url
@@ -25,24 +29,23 @@ class Test(unittest.TestCase):
         self.builder = movie_builder.MovieBuilder(TEST_CSV_LOC)
         self.builder.load_info()
         self.movie_list = self.builder.get_movie_info()
-    
+
     def test_loader(self):
         '''Tests movie_factory method.'''
-        
+
         # Should be three movie objects in list
         self.assertEqual(len(self.builder.get_movie_info()),3)
         self.assertEqual(self.movie_list[0].get_title(), "movie_a")
         self.assertEqual(self.movie_list[1].get_title(), "movie_b")
         self.assertEqual(self.movie_list[2].get_title(), "movie_c")
-        self.assertEqual(self.movie_list[0].get_description(), 
+        self.assertEqual(self.movie_list[0].get_description(),
                          "test_description_a")
         self.assertEqual(self.movie_list[1].get_trailer(), "test_trailer_b")
         self.assertEqual(self.movie_list[2].get_poster(), "test_poster_c")
-        
+
     def tearDown(self):
         self.builder = None
-    
+
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
     unittest.main()
-    

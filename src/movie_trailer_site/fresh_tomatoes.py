@@ -1,3 +1,8 @@
+'''
+Loads the html and javascript for the movie trailer website.
+@author Udacity Team
+'''
+
 import webbrowser
 import os
 import re
