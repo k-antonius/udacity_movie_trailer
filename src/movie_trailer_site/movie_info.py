@@ -30,7 +30,7 @@ class MovieInfo(object):
     def __repr__(self):
         '''String representation of MovieInfo object.'''
         
-        return "MovieInfo( " + self._title + " " + self._description + ")"
+        return "MovieInfo(" + self._title + ", " + self._description + ")"
     
     def get_title(self):
         '''Returns the title of the movie.'''
