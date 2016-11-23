@@ -94,4 +94,5 @@ ENV/
 .project
 .pydevproject
 src/.DS_Store
+data/*.html
 
