@@ -31,17 +31,17 @@ class MovieBuilder(object):
 
         Parsed information is stored in self._movie_info.
         '''
-        with open(self.__csv_file,"r") as data_file:
-            reader = csv.reader(data_file)
-            # headers in csv file:
-            # title, description, trailer_url, poster_url
-            dummy_header = reader.next()
-            for row in reader:
-                self._movie_info.append(movie_info.MovieInfo(row[TITLE],
-                                                             row[DESCRIPTION],
-                                                             row[TRAILER],
-                                                             row[POSTER])
-                                        )
+#         with open(self.__csv_file,"r") as data_file:
+        reader = csv.reader(self.__csv_file)
+        # headers in csv file:
+        # title, description, trailer_url, poster_url
+        dummy_header = reader.next()
+        for row in reader:
+            self._movie_info.append(movie_info.MovieInfo(row[TITLE],
+                                                         row[DESCRIPTION],
+                                                         row[TRAILER],
+                                                         row[POSTER])
+                                    )
 
     def get_movie_info(self):
         '''Creates MovieInfo objects.
