@@ -6,7 +6,7 @@ Created on Nov 22, 2016
 '''
 
 
-import os
+import pkg_resources
 import unittest
 from movie_trailer_site import movie_builder
 
@@ -17,10 +17,13 @@ from movie_trailer_site import movie_builder
 # movie_b,test_description_b,test_trailer_b,test_poster_b
 # movie_c,test_description_c,test_trailer_c,test_poster_c
 
-print os.getcwd()
-os.chdir("../../data/")
-data_dir = os.path.abspath(os.getcwd())
-TEST_CSV_LOC = data_dir + "/test_data.csv"
+# print os.getcwd()
+# os.chdir("../../data/")
+# data_dir = os.path.abspath(os.getcwd())
+# TEST_CSV_LOC = data_dir + "/test_data.csv"
+rm = pkg_resources.ResourceManager()
+TEST_CSV_LOC = rm.resource_stream("test",
+                                  "/data/test_data.csv")
 
 class Test(unittest.TestCase):
     '''Tests the methods from MoiveInfoLoader.
