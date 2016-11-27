@@ -13,11 +13,9 @@ from movie_trailer_site import movie_builder, fresh_tomatoes
 def load_movie_trailer_site():
     '''Loads the movie trailer website.'''
 
-    rm = pkg_resources.ResourceManager()
-    data_file = rm.resource_stream("movie_trailer_site",
+    res_man_inst = pkg_resources.ResourceManager()
+    data_file = res_man_inst.resource_stream("movie_trailer_site",
                                    "/data/movie_data.csv")
     data_loader = movie_builder.MovieBuilder(data_file)
     data_loader.load_info()
     fresh_tomatoes.open_movies_page(data_loader.get_movie_info())
-
-
