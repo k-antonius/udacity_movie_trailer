@@ -3,6 +3,8 @@ __pycache__/
 *.pycod]
 *$py.class
 */*/*.pyc
+*.pyc
+
 
 # C extensions
 *.so
@@ -24,6 +26,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+*.zip
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -94,5 +97,8 @@ ENV/
 .project
 .pydevproject
 src/.DS_Store
-data/*.html
+*~
+*.html
+src/*/*.html
+
 
