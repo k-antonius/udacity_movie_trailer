@@ -16,11 +16,6 @@ from movie_trailer_site import movie_builder
 # movie_a,test_description_a,test_trailer_a,test_poster_a
 # movie_b,test_description_b,test_trailer_b,test_poster_b
 # movie_c,test_description_c,test_trailer_c,test_poster_c
-
-# print os.getcwd()
-# os.chdir("../../data/")
-# data_dir = os.path.abspath(os.getcwd())
-# TEST_CSV_LOC = data_dir + "/test_data.csv"
 rm = pkg_resources.ResourceManager()
 TEST_CSV_LOC = rm.resource_stream("test",
                                   "/data/test_data.csv")

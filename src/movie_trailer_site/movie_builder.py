@@ -31,7 +31,6 @@ class MovieBuilder(object):
 
         Parsed information is stored in self._movie_info.
         '''
-#         with open(self.__csv_file,"r") as data_file:
         reader = csv.reader(self.__csv_file)
         # headers in csv file:
         # title, description, trailer_url, poster_url
